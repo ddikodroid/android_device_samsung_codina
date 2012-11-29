@@ -1,0 +1,3 @@
+require board=ux500
+require version-bootloader=I8160XXLD8
+require version-baseband=I8160XXLD8
