@@ -38,7 +38,7 @@
 $(call inherit-product-if-exists, device/samsung/u8500-common/common.mk)
 
 # apns config file
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
         vendor/cyanogen/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # These are the hardware-specific features
@@ -112,14 +112,17 @@ PRODUCT_COPY_FILES += $(foreach module,\
 	$(filter-out $(RAMDISK_MODULES),$(wildcard device/samsung/codina/modules/*.ko)),\
 	$(module):system/lib/modules/$(notdir $(module)))
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := device/samsung/codina/kernel
-else
-    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+#ifeq ($(TARGET_PREBUILT_KERNEL),)
+#    LOCAL_KERNEL := device/samsung/codina/kernel
+#else
+#    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+#endif
+
+TARGET_PREBUILT_KERNEL := device/samsung/codina/kernel
+LOCAL_KERNEL = $(TARGET_PREBUILT_KERNEL)
 
 # disable recovery building, we don't need it.
-TARGET_NO_RECOVERY := true
+#TARGET_NO_RECOVERY := true
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
