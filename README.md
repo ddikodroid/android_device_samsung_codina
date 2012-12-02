@@ -4,7 +4,7 @@ Samsung Galaxy Ace II (GT-I8160) Device
 Those are device configuration files for Galaxy Ace II.
 
 Warning!
-=============
+-------------
 If you wish to use this, make sure you have PHP installed on your system.
 At least **PHP 5.1**.
 
