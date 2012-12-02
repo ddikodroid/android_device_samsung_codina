@@ -7,7 +7,7 @@
  * this piece of code is released under the new bsd license.
  */
 
-$vendor_dir = '../../../vendor/samsung';
+$vendor_dir = '../../../vendor/samsung/u8500-common';
 $blob_fhandle = fopen($vendor_dir . '/u8500-vendor-blobs.mk', 'w');
 
 scrap_folders($vendor_dir . '/proprietary', $blob_fhandle);
@@ -30,7 +30,7 @@ function scrap_folders($w_dir, &$blob_fhandle) {
 }
 
 function add_blob_entry($dir, $file, &$blob_fhandle) {
-	$target = str_replace('vendor/samsung/proprietary', '', $dir);
+	$target = str_replace('vendor/samsung/u8500-common/proprietary', '', $dir);
 	fwrite($blob_fhandle, 'PRODUCT_COPY_FILES += vendor/samsung/' . $dir . '/' . $file . ':obj/' . $target . '/' . $entry . "\n");
 	fwrite($blob_fhandle, 'PRODUCT_COPY_FILES += vendor/samsung/' . $dir . '/' . $file . ':system/' . $target . '/' . $entry . "\n");
 }
