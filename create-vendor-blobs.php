@@ -9,8 +9,9 @@
 
 $vendor_dir = '../../../vendor/samsung/u8500-common';
 $blob_fhandle = fopen($vendor_dir . '/u8500-vendor-blobs.mk', 'w');
-
 scrap_folders($vendor_dir . '/proprietary', $blob_fhandle);
+echo 'Done!' . "\n";
+fclose($blob_fhandle);
 
 function scrap_folders($w_dir, &$blob_fhandle) {
 	if (!$dir = opendir($w_dir)) {
