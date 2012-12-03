@@ -21,7 +21,7 @@ function scrap_folders($w_dir, &$blob_fhandle) {
 	while (false !== ($item = readdir($dir))) {
 		if ($item != '.' && $item != '..' && $item != '../') {
 			echo '-- scraping ' . $item . ' ...' . "\n";
-			if (is_dir($item)) {
+			if (is_dir($w_dir . '/' . $item)) {
 				scrap_folders($w_dir . '/' . $item, $blob_fhandle);
 			} else {
 				add_blob_entry($w_dir, $item, $blob_fhandle);
@@ -32,7 +32,7 @@ function scrap_folders($w_dir, &$blob_fhandle) {
 
 function add_blob_entry($dir, $file, &$blob_fhandle) {
 	$dir = str_replace('../', '', $dir);
-	$target = str_replace('vendor/samsung/u8500-common/proprietary/', '', $dir);
+	$target = str_replace('vendor/samsung/u8500-common/proprietary', '', rtrim('/', $dir));
 	if ($target == '' && strstr($file, '.so')) {
 		$target = 'lib';
 	} else if ($target == '') {
