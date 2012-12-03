@@ -32,7 +32,10 @@ function scrap_folders($w_dir, &$blob_fhandle) {
 
 function add_blob_entry($dir, $file, &$blob_fhandle) {
 	$dir = str_replace('../', '', $dir);
-	$target = str_replace('vendor/samsung/u8500-common/proprietary', '', $dir);
+	$target = str_replace('vendor/samsung/u8500-common/proprietary/', '', $dir);
+	if (is_empty($target) {
+		$target = 'lib';
+	}
 	fwrite($blob_fhandle, 'PRODUCT_COPY_FILES += ' . $dir . '/' . $file . ':obj/' . $target . '/' . $file . "\n");
 	fwrite($blob_fhandle, 'PRODUCT_COPY_FILES += ' . $dir . '/' . $file . ':system/' . $target . '/' . $file . "\n");
 }
