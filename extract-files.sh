@@ -49,7 +49,6 @@ adb pull /system/lib/libMali.so ../../../vendor/$MANUFACTURER/$COMMON/proprietar
 adb pull /system/lib/libOpenSLES.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libOpenSLES.so
 adb pull /system/lib/libPanoraMax3.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libPanoraMax3.so
 adb pull /system/lib/libril.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libril.so
-adb pull /system/lib/libseccamera.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libseccamera.so
 adb pull /system/lib/libsecjpegarcsoft.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libsecjpegarcsoft.so
 adb pull /system/lib/libsecjpeginterface.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libsecjpeginterface.so
 adb pull /system/lib/libsecril-client.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/libsecril-client.so
@@ -60,10 +59,10 @@ adb pull /system/lib/egl/libEGL_mali.so ../../../vendor/$MANUFACTURER/$COMMON/pr
 adb pull /system/lib/egl/libGLES_android.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/egl/libGLES_android.so
 adb pull /system/lib/egl/libGLESv1_CM_mali.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/egl/libGLESv1_CM_mali.so
 adb pull /system/lib/egl/libGLESv2_mali.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/egl/libGLESv2_mali.so
-adb pull /system/lib/hw/copybit.samsung.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/copybit.GT-I8160.so
-adb pull /system/lib/hw/gps.codina.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/gps.GT-I8160.so
+adb pull /system/lib/hw/copybit.samsung.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/copybit.ux500.so
+adb pull /system/lib/hw/gps.ux500.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/gps.ux500.so
 adb pull /system/lib/hw/gralloc.default.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/gralloc.default.so
-adb pull /system/lib/hw/gralloc.samsung.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/gralloc.GT-I8160.so
+adb pull /system/lib/hw/gralloc.samsung.so ../../../vendor/$MANUFACTURER/$COMMON/proprietary/hw/gralloc.ux500.so
 adb pull /system/usr/keychars/codina-kp.kcm.bin ../../../vendor/$MANUFACTURER/$COMMON/proprietary/keychars/codina-kp.kcm.bin
 adb pull /system/usr/keychars/qwerty2.kcm.bin ../../../vendor/$MANUFACTURER/$COMMON/proprietary/keychars/qwerty2.kcm.bin
 adb pull /system/usr/keychars/qwerty.kcm.bin ../../../vendor/$MANUFACTURER/$COMMON/proprietary/keychars/qwerty.kcm.bin
